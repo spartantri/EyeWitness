@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 
 # Global Variables
 userid=`id -u`
