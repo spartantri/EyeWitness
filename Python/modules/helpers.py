@@ -736,6 +736,16 @@ def default_creds_category(http_object):
     """
     http_object.default_creds = None
     http_object.category = None
+    group_categories = []
+
+    try:
+        groupcatpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               '..', 'group_categories.txt')
+        with open(groupcatpath) as groupcat_file:
+            group_categories =  groupcat_file.readlines()
+    except IOError:
+        print("[*] INFO: Using the default categories only")
+
     try:
         sigpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                '..', 'signatures.txt')
@@ -746,6 +756,7 @@ def default_creds_category(http_object):
 
         with open(catpath) as cat_file:
             categories = cat_file.readlines()
+            categories += group_categories
 
         # Loop through and see if there are any matches from the source code
         # EyeWitness obtained
