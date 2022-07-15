@@ -740,7 +740,7 @@ def default_creds_category(http_object):
 
     try:
         groupcatpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                               '..', 'group_categories.txt')
+                                    '..', 'group_categories.txt')
         with open(groupcatpath) as groupcat_file:
             group_categories =  groupcat_file.readlines()
     except IOError:
@@ -748,9 +748,9 @@ def default_creds_category(http_object):
 
     try:
         sigpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                               '..', 'signatures.txt')
+                                '..', 'signatures.txt')
         catpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                               '..', 'categories.txt')
+                                '..', 'categories.txt')
         with open(sigpath) as sig_file:
             signatures = sig_file.readlines()
 
@@ -823,8 +823,7 @@ def default_creds_category(http_object):
 
         return http_object
     except IOError:
-        print("[*] WARNING: Credentials file not in the same directory"
-              " as EyeWitness")
+        print("[*] WARNING: Credentials file not in the same directory as EyeWitness")
         print('[*] Skipping credential check')
         return http_object
 

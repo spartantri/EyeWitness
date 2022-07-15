@@ -73,30 +73,30 @@ def sort_data_and_write(cli_parsed, data):
     # We'll be using this number for our table of contents
     total_results = len(data)
     categories = [('highval', 'High Value Targets', 'highval'),
-                  ('dirlist', 'Directory Listings', 'dirlist'),
-                  (None, 'Uncategorized', 'uncat'),
-                  ('cms', 'Content Management System (CMS)', 'cms'),
-                  ('idrac', 'IDRAC/ILo/Management Interfaces', 'idrac'),
-                  ('nas', 'Network Attached Storage (NAS)', 'nas'),
-                  ('construction', 'Under Construction', 'construction'),
-                  ('netdev', 'Network Devices', 'netdev'),
-                  ('voip', 'Voice/Video over IP (VoIP)', 'voip'),
-                  ('unauth', '401/403 Unauthorized', 'unauth'),
-                  ('notfound', '404 Not Found', 'notfound'),
-                  ('crap', 'Splash Pages', 'crap'),
-                  ('printer', 'Printers', 'printer'),
-                  ('successfulLogin', 'Successful Logins', 'successfulLogin'),
-                  ('identifiedLogin', 'Identified Logins', 'identifiedLogin'),
-                  ('infrastructure', 'Infrastructure', 'infrastructure'),
-                  ('redirector', 'Redirecting Pages', 'redirector'),
-                  ('badhost', 'Invalid Hostname', 'badhost'),
-                  ('inerror', 'Internal Error', 'inerror'),
-                  ('badreq', 'Bad Request', 'badreq'),
-                  ('serviceunavailable', 'Service Unavailable', 'serviceunavailable'),
-                  ]
+                    ('dirlist', 'Directory Listings', 'dirlist'),
+                    (None, 'Uncategorized', 'uncat'),
+                    ('cms', 'Content Management System (CMS)', 'cms'),
+                    ('idrac', 'IDRAC/ILo/Management Interfaces', 'idrac'),
+                    ('nas', 'Network Attached Storage (NAS)', 'nas'),
+                    ('construction', 'Under Construction', 'construction'),
+                    ('netdev', 'Network Devices', 'netdev'),
+                    ('voip', 'Voice/Video over IP (VoIP)', 'voip'),
+                    ('unauth', '401/403 Unauthorized', 'unauth'),
+                    ('notfound', '404 Not Found', 'notfound'),
+                    ('crap', 'Splash Pages', 'crap'),
+                    ('printer', 'Printers', 'printer'),
+                    ('successfulLogin', 'Successful Logins', 'successfulLogin'),
+                    ('identifiedLogin', 'Identified Logins', 'identifiedLogin'),
+                    ('infrastructure', 'Infrastructure', 'infrastructure'),
+                    ('redirector', 'Redirecting Pages', 'redirector'),
+                    ('badhost', 'Invalid Hostname', 'badhost'),
+                    ('inerror', 'Internal Error', 'inerror'),
+                    ('badreq', 'Bad Request', 'badreq'),
+                    ('serviceunavailable', 'Service Unavailable', 'serviceunavailable'),
+                ]
     try:
         groupcatpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                               '..', 'group_categories.txt')
+                                    '..', 'group_categories.txt')
         with open(groupcatpath) as groupcat_file:
             group_categories =  groupcat_file.readlines()
         categories += [(c.split(',')[0],c.split(',')[1],c.split(',')[2]) for c in group_categories]
