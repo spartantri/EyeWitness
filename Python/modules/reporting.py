@@ -94,6 +94,11 @@ def sort_data_and_write(cli_parsed, data):
                   ('badreq', 'Bad Request', 'badreq'),
                   ('serviceunavailable', 'Service Unavailable', 'serviceunavailable'),
                   ]
+    try:
+        group_categories = open('group_categories.csv','r').read().split('\n')
+        categories += [(c.split(',')[0],c.split(',')[1],c.split(',')[2]) for c in group_categories]
+    except:
+        print("Using the default categories only")
     if total_results == 0:
         return
     # Initialize stuff we need
