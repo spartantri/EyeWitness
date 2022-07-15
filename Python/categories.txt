@@ -169,7 +169,7 @@ Welcome to Lion Server;ServerCenter.png;Apple Inc.|splash
 OS X Server;Welcome to Server;com.apple.entity.Page|splash
 Welcome to OS X Server;/xcode;/profilemanager|splash
 Synology DiskStation;full-featured network attached;logo-synology|nas
-Under Construction</title>;The site you are trying to view does not|splash
+Under Construction</title>;The site you are trying to view does not|construction
 Welcome to VMware vSphere;Getting Started;ID_ForAdmins|virtualization
 qnap-lib;myqnapcloud.com;logo-img x-abs-layout|nas
 var thisIDRACText = EntityDecode(" This iDRAC") //" This iDRAC"|idrac
